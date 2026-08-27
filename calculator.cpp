@@ -54,4 +54,4 @@ int main(){
     }while(choise == 'y' || choise == 'Y');
     cout << "Thank you for using the calculator!" <<endl;
     return 0;
-}
+};
