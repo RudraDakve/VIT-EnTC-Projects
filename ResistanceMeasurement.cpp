@@ -21,19 +21,18 @@ int main(){
     }
     resistance = voltage / current;
     if(resistance < 0){
-        cout << "The resistance of the resistor is: " << resistance << "ohms" << endl;
+        cout << "The resistance of the resistor is: " << -(resistance) << "ohms" << endl;
         cout << "Since resistance cannot be negative, please check the direction of current and voltage applied." << endl;
-    }
-    if(resistance < 1000){
-       cout << "The resistance of the resistor is: " << resistance << "ohms" << endl;
         return 0;
     }
-    else if(resistance >= 1000 && resistance < 1000000){
+    if(resistance >= 1000000){
+        cout << "The resistance of the resistor is: " << resistance/1000000 << "mega-ohms" << endl;
+        return 0;
+    }else if(resistance >= 1000 && resistance < 1000000){
         cout << "The resistance of the resistor is: " << resistance/1000 << "kilo-ohms" << endl;
         return 0; 
-    }
-    else if(resistance >= 1000000){
-        cout << "The resistance of the resistor is: " << resistance/1000000 << "mega-ohms" << endl;
+    }else{
+       cout << "The resistance of the resistor is: " << resistance << "ohms" << endl;
         return 0;
     }
 };
